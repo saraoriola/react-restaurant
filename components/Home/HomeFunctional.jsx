@@ -1,15 +1,16 @@
-import React from 'react'
+import React from 'react';
+import './HomeFunctional.css';
 
- const HomeFunctional = (props) => {
-    const dishes = props.dishes.map((dish) => (
-        <div key={dish.id}>
-          <h3>{dish.name}</h3>
-          <p>Description: {dish.description}</p>
-          <p>Price: {dish.price}</p>
-        </div>
-      ));
-  return (
-    <div>{dishes}</div>
-  )
-}
+const HomeFunctional = ({ dishes }) => (
+  <div className="card-container">
+    {dishes.map((dish) => (
+      <div key={dish.id} className="card">
+        <h3>{dish.name}</h3>
+        <p>{dish.description}</p>
+        <p>Price: {dish.price}</p>
+      </div>
+    ))}
+  </div>
+);
+
 export default HomeFunctional;

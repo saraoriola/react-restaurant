@@ -1,24 +1,29 @@
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-  }
-  
-  .logo {
-    font-size: 24px;
-  }
-  
-  .menu {
-    list-style: none;
-    display: flex;
-    padding: 0;
-  }
-  
-  .menuItem {
-    margin-left: 20px;
-    cursor: pointer;
-  }
-  
+.header-container {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav li {
+  margin-right: 1rem;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav li a {
+  color: rgb(49, 49, 49);
+  text-decoration: none;
+}
