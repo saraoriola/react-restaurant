@@ -1,49 +1,33 @@
-import HeaderFunctional from '../components/Header/HeaderFunctional'
-import HomeFunctional from '../components/Home/HomeFunctional'
-import './App.css'
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-const dishes = [
-  {
-    id: 1,
-    name: 'Steak',
-    description: 'Grilled steak with a side of vegetables.',
-    price: 25,
-  },
-  {
-    id: 2,
-    name: 'Pasta Carbonara',
-    description: 'Classic Italian pasta with bacon and cream sauce.',
-    price: 15,
-  },
-  {
-    id: 3,
-    name: 'Salmon Fillet',
-    description: 'Freshly grilled salmon served with lemon and herbs.',
-    price: 18,
-  },
-  {
-    id: 4,
-    name: 'Chicken Caesar Salad',
-    description: 'Crisp romaine lettuce with grilled chicken and Caesar dressing.',
-    price: 12,
-  },
-  {
-    id: 5,
-    name: 'Vegetarian Pizza',
-    description: 'Pizza topped with a variety of fresh vegetables.',
-    price: 14,
-  },
-];
+import './App.css';
 
+import Header from './components/Header/Header';
+import Home from './components/Home/Home';
+import About from './components/About/About';
+import Menu from './components/Menu/Menu';
+import Blog from './components/Blog/Blog';
+import Reserve from './components/Reserve/Reserve';
+import Contact from './components/Contact/Contact';
 
-function App() {
-
+const App = () => {
   return (
     <>
-    <HeaderFunctional/>
-    <HomeFunctional dishes = {dishes}/>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Menu" element={<Menu />} />
+          <Route path="/Blog" element={<Blog />} />
+          <Route path="/Reserve" element={<Reserve />} />
+          <Route path="/Contact" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 };
 
-export default App
+
+export default App;
