@@ -1,0 +1,24 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    padding: 0;
+  }
+  
+  .menuItem {
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  
