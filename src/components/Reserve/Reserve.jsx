@@ -30,7 +30,6 @@ const Reserve = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     localStorage.setItem('reservationData', JSON.stringify(formData));
-    console.log('Datos del formulario:', formData);
   };
 
   return (
